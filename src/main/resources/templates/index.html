@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:include="layout :: page">
+
+<!-- region Styles -->
+<style th:inline="css" th:fragment="scripts">
+	body { background-color: #00ff00 }
+</style>
+<!-- endregion -->
+<div th:fragment="content">
+	<h1>This is a simple Spring MVC & Thymeleaf page</h1>
+</div>
+<script th:fragment="scripts" th:inline="javascript" type="text/javascript">
+	/*<![CDATA[*/
+	console.log('this is an inline js')
+	/*]]>*/
+</script>
