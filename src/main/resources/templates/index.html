@@ -2,10 +2,24 @@
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}"
 		xmlns:th="http://www.thymeleaf.org">
 <body>
-	<section layout:fragment="content" class="container">
-		<ul>
-			<li><a href="user/list.html" th:href="@{/user/list}">User List</a></li>
-			<li><a href="task/list.html" th:href="@{/task/list}">Task List</a></li>
-		</ul>
-	</section>
+	<th:block layout:fragment="content">
+		<section class="card blue-gradient wow fadeIn" id="intro">
+
+               <!-- Content -->
+               <div class="card-body text-white text-center py-5 px-5 my-5">
+
+                   <h1 class="mb-4">
+                       <strong>Spring MVC & Thymeleaf</strong>
+                   </h1>
+                   <p>
+                       Aplicação de estudos do projeto do curso <em>Spring Core</em>, ministrado pelo <em>springframeworkguru</em>
+                   </p>
+                   <a target="_blank" href="https://www.udemy.com/course/spring-core/" class="btn btn-outline-white btn-lg">Curso de Spring Core na Udemy
+                       <i class="fas fa-graduation-cap ml-2"></i>
+                   </a>
+
+               </div>
+               <!-- Content -->
+           </section>
+	</th:block >
 </body>

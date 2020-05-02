@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Layout page</title>
-  <script src="common-script.js"></script>
+	<title>Layout page</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>My website</h1>
-  </header>
-  <section layout:fragment="content">
-    <p>Page content goes here</p>
-  </section>
-  <footer>
-    <p>My footer</p>
-    <p layout:fragment="custom-footer">Custom footer here</p>
-  </footer>  
+<body class="grey lighten-3">
+	<header th:insert="~{fragments/header}"></header>
+	<main class="pt-5 mx-lg-5">
+    	<div class="container-fluid mt-5">
+    		<th:block layout:fragment="content">
+    		</th:block>
+    	</div>
+    </main>
+	<footer th:insert="~{fragments/footer}"></footer>
+	
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
 </body>
 </html>
